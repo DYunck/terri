@@ -5,6 +5,7 @@ A redesign of the Satsuma website: career coaching for pharmacists.
 - `index.html`: Home (hero, "what we hear", Find your AND, meet Terri, ways to work together, testimonial, FAQ, free assessment offer)
 - `about.html`: About (mission, values, team, contact form)
 - `assessment.html`: "Find Your AND" free self-assessment, the lead magnet. Six questions; visitors give their first name and email to see their results.
+- `assets/chat.js`: Terri's assistant, the chat in the bottom corner of every page
 - `assets/styles.css`, `assets/main.js`, `assets/assessment.js`, `assets/img/`
 
 It's a plain static site with no build step. Open `index.html` in a browser to view it.
@@ -54,3 +55,16 @@ The site positions Satsuma as a small, founder-led boutique practice. Before sha
 - "Every conversation is with Terri… not a rotating roster of coaches"
 - "A confidential, judgement-free space"
 - The Flip the Script cohort "will be kept small"
+
+## Terri's assistant (chat)
+
+A scripted chat assistant, shown with Terri's photo, sits in the bottom-right corner of every page. It is clearly labelled as an automated assistant, not Terri herself.
+
+- It greets visitors, offers paths ("I feel stuck", "explore other paths", "tell me about coaching", "I have a question"), answers common questions typed in free text (cost, leaving pharmacy, settings, timelines, roles, confidentiality, Terri's background, Flip the Script) and steers every conversation toward a discovery call.
+- It asks two light qualifying questions (practice setting and timeline) and passes them along with the request so Terri has context.
+- **How booking works, based on `SITE_CONFIG` in `assets/main.js`:**
+  - `bookingUrl` set: offers a "Choose a time" button linking to the calendar.
+  - Otherwise, `formEndpoint` set: collects name and email right in the chat and sends the request (with the chat context).
+  - Neither set: sends visitors to the contact form with the message prefilled from the chat.
+- All of the wording lives at the top of `assets/chat.js` (`NODES` for the guided flow, `TOPICS` for typed questions) and can be edited as plain text.
+- It needs no server or API key. It answers only from its script, so it won't improvise. Its cost answer says pricing depends on the engagement and is discussed on the call; Terri should confirm she's happy with that wording.
