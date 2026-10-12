@@ -25,6 +25,18 @@ Open `assets/main.js` and edit `SITE_CONFIG` at the top:
 | `formEndpoint` | Where the contact form, Flip the Script interest list and self-assessment send submissions. Assessment signups include the person's result (e.g. "A pharmacist AND a technologist") and answers, so follow-ups can be personal. A free [Formspree](https://formspree.io) form works out of the box: paste its `https://formspree.io/f/...` URL. |
 | `contactEmail` | Optional. Shown to visitors if the forms aren't connected yet. |
 
+## SEO setup
+
+Each page has a canonical URL, Open Graph and Twitter card tags (with the share image `assets/img/og-image.png`), and JSON-LD structured data: `ProfessionalService` for Satsuma, `Person` for Terri, plus the FAQ. `robots.txt` and `sitemap.xml` sit at the repo root.
+
+**When the custom domain goes live**, replace `https://dyunck.github.io/terri/` with the new address everywhere it appears (canonical, `og:url`, `og:image`, `twitter:image`, the JSON-LD blocks, `robots.txt` and `sitemap.xml`). A find-and-replace across the repo does it in one step. Then:
+
+1. Add the domain under **Settings → Pages → Custom domain**.
+2. Verify the site in [Google Search Console](https://search.google.com/search-console) and submit `sitemap.xml`.
+3. Check the share preview with LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/).
+
+Note: search engines only read `robots.txt` at the root of a domain, so it takes effect once the site is on its own domain. Until then, submit the sitemap directly in Search Console.
+
 ## Photos
 
 The two headshots in `assets/img/` were cropped from a screenshot of the current site and are low resolution. Replace `terri-wang.jpg` and `mengdi-lin.jpg` with the original photo files (same names) for the sharpest result.
