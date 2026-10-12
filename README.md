@@ -51,7 +51,6 @@ The two headshots in `assets/img/` were cropped from a screenshot of the current
 
 The site positions Satsuma as a small, founder-led boutique practice. Before sharing widely, Terri should confirm she's comfortable with these statements:
 
-- "Limited availability" and "Terri works with a small number of pharmacists at a time" (hero and The Satsuma Approach)
 - "Every conversation is with Terri… not a rotating roster of coaches"
 - "A confidential, judgement-free space"
 - The Flip the Script cohort "will be kept small"
