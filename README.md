@@ -45,3 +45,12 @@ The two headshots in `assets/img/` were cropped from a screenshot of the current
 
 - The FAQ answers on the home page are draft copy written for this redesign. Terri should review them, especially "How long does coaching take?" and "What kinds of roles do clients move into?". The FAQ is also marked up with FAQPage structured data (the JSON-LD block in the `<head>` of `index.html`) so it can appear in search results; if you edit an answer, update it in both places.
 - The assessment's questions, result descriptions and suggested career paths live at the top of `assets/assessment.js` (`QUESTIONS` and `RESULTS`) and can be edited as plain text.
+
+## Boutique positioning: claims to confirm
+
+The site positions Satsuma as a small, founder-led boutique practice. Before sharing widely, Terri should confirm she's comfortable with these statements:
+
+- "Limited availability" and "Terri works with a small number of pharmacists at a time" (hero and The Satsuma Approach)
+- "Every conversation is with Terri… not a rotating roster of coaches"
+- "A confidential, judgement-free space"
+- The Flip the Script cohort "will be kept small"
